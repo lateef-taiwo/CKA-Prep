@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: bank-app
+  name: bank-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bank-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: bank-app
+    spec:
+      containers:
+      - image: savytech/bank-app:1.0
+        name: bank-app
+        resources: {}
+status: {}

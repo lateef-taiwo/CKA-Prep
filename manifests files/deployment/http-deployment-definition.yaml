@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-frontend
+  labels:
+    tier: frontend
+    app: httpd
+spec:
+  selector:
+    matchLabels:
+      app: myapp # must match the label of the pod
+  replicas: 3
+  template:
+    metadata:
+      name: httpd
+      labels:
+        app: myapp # pod label
+    spec:
+      containers:
+        - name: httpd
+          image: httpd:2.4-alpine
+
+
+# ---
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: httpd-frontend
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       name: httpd-frontend
+#   template:
+#     metadata:
+#       labels:
+#         name: httpd-frontend
+#     spec:
+#       containers:
+#       - name: httpd-frontend
+#         image: httpd:2.4-alpine

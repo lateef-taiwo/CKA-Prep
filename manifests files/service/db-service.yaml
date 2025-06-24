@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-03-14T02:00:02Z"
+  name: db-service
+  namespace: marketing
+  resourceVersion: "865"
+  uid: b7f5fca8-70de-4390-8525-15e2ccfb5287
+spec:
+  clusterIP: 10.43.242.111
+  clusterIPs:
+  - 10.43.242.111
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32057
+    port: 6379
+    protocol: TCP
+    targetPort: 6379
+  selector:
+    name: redis
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

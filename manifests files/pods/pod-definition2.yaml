@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: frontend
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+  # tolerations
+  tolerations:
+  - key: "spray"
+    operator: "equal"
+    value: "mortein"
+    effect: "NoSchedule"

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels: 
+    app: demoapp   #this label doesn't really matter
+spec:
+  selector:
+    matchLabels:
+      app: myapp # must match the label of the pod
+  replicas: 3
+  template:
+    metadata:
+      name: nginx-2
+      labels:
+        app: myapp # pod label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+
+    

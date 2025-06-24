@@ -1,0 +1,29 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: myapp
+    type: backend
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 80
+
+
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: webapp-service
+#   namespace: default
+# spec:
+#   ports:
+#   - nodePort: 30080
+#     port: 8080
+#     targetPort: 8080
+#   selector:
+#     name: simple-service
+#   type: NodePort
