@@ -16,6 +16,7 @@ The kind.yaml manifest file in this directory can be used to install a kind clus
     kind create cluster --config kind.yaml --name my-cluster
 
 To delete the kind cluster, run
+    
     kind delete clusters my-cluster
 
 ## For a kubernetes cluster with ingress support, use the following kin-with-ingress-support.yaml config file.
