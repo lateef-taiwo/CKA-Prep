@@ -1,8 +1,8 @@
 ## Setting up Kind Cluster
 Kind (Kubernetes in docker) a tool that will help us to create Kubernetes cluster on top of Docker containers.
 
-    curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.20.0/kind-windows-amd64
-    Move-Item .\kind-windows-amd64.exe D:\Kind\kind.exe
+     curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.29.0/kind-windows-amd64
+     Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
 
 On Windows search `Advanced system settings` then Click on `Environment Variables` under `System Variables` set new `Path variable` to `D:\Kind`
 
