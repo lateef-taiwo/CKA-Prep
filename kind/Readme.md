@@ -8,7 +8,7 @@ On Windows search `Advanced system settings` then Click on `Environment Variable
 
 Note: you can change the location from `D:\Kind\kind.exe` to whatever you like.
 
-Check the [kind documentation](![text](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)) for more useful information
+Check the (![kind documentation](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)) for more useful information
 
 The kind.yaml manifest file in this directory can be used to install a kind cluster suitable for local kubernetes testing and also dev/non-prod environments kubernetes cluster setup
 
